@@ -1,0 +1,21 @@
+/* CSS Class Selector (https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) */
+table.tictactoe-board {
+  border-collapse: collapse;
+}
+
+table.tictactoe-board td {
+  /* CSS Custom Property (Variable) (https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) */
+  --width: 75px;
+
+  border: 1px solid black;
+  width: var(--width);
+  height: var(--width);
+}
+
+td.occupied-X {
+  background-color: red;
+}
+
+td.occupied-O {
+  background-color: blue;
+}
