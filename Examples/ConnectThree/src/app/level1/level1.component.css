@@ -1,3 +1,5 @@
+/* CSS styles for game board */
+
 /* CSS Class Selector (https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) */
 table.tictactoe-board {
   border-collapse: collapse;
@@ -18,4 +20,15 @@ td.occupied-X {
 
 td.occupied-O {
   background-color: blue;
+}
+
+td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 50px;
+  color: white;
+}
+
+button {
+  margin-top: 10px;
 }

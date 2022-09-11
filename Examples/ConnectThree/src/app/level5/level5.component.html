@@ -1,0 +1,19 @@
+<h1>Level 5</h1>
+
+<p>
+  Hello Pipes!
+</p>
+
+<table class="tictactoe-board">
+  <tbody>
+    <tr *ngFor="let row of board.boardContent; let rowIx = index">
+      <td *ngFor="let col of row; let colIx = index" [class]="col | playerName | playerClass" (click)="board.set(colIx, rowIx)">
+        {{col | playerName}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 *ngIf="board.winner !== 0">The winner is {{board.winner | playerName}}</h2>
+
+<button (click)="board.restart()">Restart</button>

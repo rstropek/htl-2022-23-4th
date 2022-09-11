@@ -1,0 +1,60 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "01) Building the Main Menu",
+  "steps": [
+    {
+      "file": "src/styles.css",
+      "description": "We center the content by combining *max-width* and *margin*. This places the content nicely in the middle of the screen on large monitors.\n\nAdditionally, we set a *sans serif* font for our app. In practice, you could consider using a font from [*Google Fonts*](https://fonts.google.com/).",
+      "line": 3,
+      "title": "Center the body's content"
+    },
+    {
+      "file": "src/styles.css",
+      "description": "Note that styles in the file *src/styles.css* apply to **all** components of our app. This is why they are called **global styles**.",
+      "line": 8,
+      "title": "Global Styles"
+    },
+    {
+      "file": "src/app/app.component.ts",
+      "description": "`@Component` is called a *Decorator*. Angular Components are marked with this decorator. You will learn more about components later. For now, remember that the `@Component` decorator brings together the TypeScript code of the component (logic), its HTML code (view structure), and its CSS (formatting).",
+      "line": 8,
+      "title": "Angular component decorators"
+    },
+    {
+      "file": "src/app/app.component.html",
+      "description": "We build the menu with regular [*Unordered List*](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) and [*List Items*](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li). In order to format it as a nice-looking menu, we need CSS.",
+      "line": 1,
+      "title": "Build the main menu"
+    },
+    {
+      "file": "src/app/app.component.css",
+      "description": "Here we define the styles for the *app.component*. Note that these styles are **local** to *app.component*. In contrast to the styles in *src/styles.css*, the styles here only apply to *app.component* and nothing else.",
+      "line": 1,
+      "title": "Local styles"
+    },
+    {
+      "file": "src/app/app.component.css",
+      "description": "Here we use a *CSS Type Selector* to format all `ul` elements.",
+      "line": 4,
+      "title": "CSS Type Selector"
+    },
+    {
+      "file": "src/app/app.component.css",
+      "description": "With this *CSS Descendent Combinator* we make sure that all `li` elements under `ul` are displayed side-by-side, not one below the other.",
+      "line": 14,
+      "title": "CSS Descendent Selector"
+    },
+    {
+      "file": "src/app/app.component.css",
+      "description": "Here we use *CSS Pseudo Classes* to specify that all but the first `li` elements should have a left margin. That adds a little bit of distance between the menu items.",
+      "line": 23,
+      "title": "CSS Pseudo Classes"
+    },
+    {
+      "file": "src/app/app.component.css",
+      "description": "We make sure that visited hyperlinks are displayed in white.",
+      "line": 29,
+      "title": "Formatting hyperlinks"
+    }
+  ]
+}

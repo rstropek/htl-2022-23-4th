@@ -1,0 +1,29 @@
+<h1>Level </h1>
+
+<p>
+  Let's add a little bit of logic.
+</p>
+
+<table class="tictactoe-board">
+  <tbody>
+    <tr>
+      <td [class]="getStyle(0, 0)" (click)="set(0, 0)">{{getPlayer(0, 0)}}</td>
+      <td [class]="getStyle(1, 0)" (click)="set(1, 0)">{{getPlayer(1, 0)}}</td>
+      <td [class]="getStyle(2, 0)" (click)="set(2, 0)">{{getPlayer(2, 0)}}</td>
+    </tr>
+    <tr>
+      <td [class]="getStyle(0, 1)" (click)="set(0, 1)">{{getPlayer(0, 1)}}</td>
+      <td [class]="getStyle(1, 1)" (click)="set(1, 1)">{{getPlayer(1, 1)}}</td>
+      <td [class]="getStyle(2, 1)" (click)="set(2, 1)">{{getPlayer(2, 1)}}</td>
+    </tr>
+    <tr>
+      <td [class]="getStyle(0, 2)" (click)="set(0, 2)">{{getPlayer(0, 2)}}</td>
+      <td [class]="getStyle(1, 2)" (click)="set(1, 2)">{{getPlayer(1, 2)}}</td>
+      <td [class]="getStyle(2, 2)" (click)="set(2, 2)">{{getPlayer(2, 2)}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 [hidden]="winner === 0">The winner is {{getWinningPlayer()}}</h2>
+
+<button (click)="restart()">Restart</button>

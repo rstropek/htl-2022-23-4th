@@ -1,24 +1,6 @@
 # Angular Guide
 
-## Prepare Your Computer
-
-### Must Have
-
-* Install [VSCode](https://code.visualstudio.com/) with the following extensions:
-  * [Angular Essentials](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials)
-  * [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
-  * [Nx Console](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
-* Install [Node.js](https://nodejs.org/en/)
-* Install [Angular CLI](https://angular.io/cli)
-* Install [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
-
-### Consider
-
-* If you are on Windows, consider developing in the [*Windows Subsystem for Linux* (WSL)](https://docs.microsoft.com/de-de/windows/wsl/install)
-
-## Prepare Online Accounts
-
-* Create a [GitHub Account](https://github.com/signup) if you do not already have one
+⚠️ Make sure you have the required prerequisites as mentioned [here](0005-Preparation.md).
 
 ## ⚠️ Avoid
 

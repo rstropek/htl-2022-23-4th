@@ -1,0 +1,78 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "02) Building the Game Board",
+  "steps": [
+    {
+      "file": "src/app/level1/level1.component.ts",
+      "description": "We create a new Angular Component with:\n\n>> npx ng generate component Level1 --skip-tests\n\nThis component will be our playground for building the basic game board using HTML and CSS.",
+      "line": 2,
+      "title": "Create Angular Component"
+    },
+    {
+      "file": "src/app/app.module.ts",
+      "description": "If you create a new Angular Component with `ng generate`, the component is automatically added to the main *Angular Module*. Normally, you do not need to do that manually. Only if you manually restructure your app, you have to adjust the Angular Module yourself.",
+      "line": 12,
+      "title": "Angular Module"
+    },
+    {
+      "file": "src/app/level1/level1.component.ts",
+      "description": "You can remove all the code from this class. We will deal with logic later on.",
+      "line": 9,
+      "title": "Remove TS logic"
+    },
+    {
+      "file": "src/app/app-routing.module.ts",
+      "description": "We add the new component to our list of routes. That enables us to jump directly to the component using the URL.\n\nNote that we also define a redirect so that an empty URL path leads us to the *level1* URL.",
+      "line": 7,
+      "title": "Adding Routes"
+    },
+    {
+      "file": "src/app/app.component.html",
+      "description": "⚠️ Note that in Angular, we do **not** use `<a href=\"...\">...</a>`. Use `<a routerLink=\"...\">...</a>` instead.",
+      "line": 2,
+      "title": "Router Links"
+    },
+    {
+      "file": "src/app/app.component.html",
+      "description": "The content of the currently selected route (derived from URL) is inserted in the `router-outlet` of the main component *app.component*.\n\nTry running your app (`npm start`) and test the routing.",
+      "line": 6,
+      "title": "Router Outlet"
+    },
+    {
+      "file": "src/app/level1/level1.component.css",
+      "description": "Let's define CSS styles to make our game board shine.",
+      "line": 1,
+      "title": "Styling the Game Board"
+    },
+    {
+      "file": "src/app/level1/level1.component.css",
+      "description": "This is a *CSS Class Selector*. You will see how to apply the style in HTML in a moment.",
+      "line": 4,
+      "title": "CSS Class Selector"
+    },
+    {
+      "file": "src/app/level1/level1.component.css",
+      "description": "Here we have something special. We use a *CSS Variable* so that we do not need to repeat a constant.",
+      "line": 10,
+      "title": "CSS Variables"
+    },
+    {
+      "file": "src/app/level1/level1.component.html",
+      "description": "Here we manually build the game board. Note the assigned CSS class `tictactoe-board` here. We have defined it earlier in the CSS file.",
+      "line": 7,
+      "title": "Assigning CSS Class"
+    },
+    {
+      "file": "src/app/level1/level1.component.html",
+      "description": "We can also mark a board cell as occupied using a CSS class. Later, we will assign these CSS classes using TypeScript code.",
+      "line": 10,
+      "title": "Assigning CSS Class (2)"
+    },
+    {
+      "file": "src/app/level1/level1.component.ts",
+      "description": "No TypeScript logic yet.\n\nTry your app, it should now display a nice Tic Tac Toe board.",
+      "line": 9,
+      "title": "No Logic Yet"
+    }
+  ]
+}
