@@ -8,7 +8,7 @@ export interface BoardCell {
   /**
    * Player (X or O) occupying the cell, empty string if the cell is empty.
    */
-  player: string;
+  playerName: string;
 
   /**
    * CSS class of the player occupying the cell, empty string if the cell is empty.
@@ -38,7 +38,7 @@ export class Level3Component extends Level2Component {
       result.push([]);
       for (let col = 0; col < 3; col++) {
         result[row][col] = {
-          player: this.getPlayer(col, row),
+          playerName: this.getPlayerName(col, row),
           class: this.getStyle(col, row),
         };
       }

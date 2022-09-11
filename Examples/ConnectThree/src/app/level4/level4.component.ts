@@ -58,7 +58,7 @@ export class Level4Component {
    * @returns Player (X or O), or empty string if there is no winner yet.
    */
   public getWinningPlayer(): string {
-    return this.playerNames[this.board.winner];
+    return this.playerNames[this.board.winnerIndex];
   }
 
   /**
@@ -69,7 +69,7 @@ export class Level4Component {
     for (let row of this.board.boardContent) {
       result.push(
         row.map((cellPlayer) => ({
-          player: this.playerNames[cellPlayer],
+          playerName: this.playerNames[cellPlayer],
           class: this.playerToClass(cellPlayer),
         }))
       );

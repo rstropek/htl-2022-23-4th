@@ -1,0 +1,42 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "03) Adding game logic",
+  "steps": [
+    {
+      "file": "src/app/level2/level2.component.css",
+      "description": "CSS for this second level did not change. Note how we can import an existing CSS file.",
+      "line": 2,
+      "title": "Import existing CSS"
+    },
+    {
+      "file": "src/app/level2/level2.component.ts",
+      "description": "We develop the game logic of Connect-Three (TicTacToe) inside this class.",
+      "line": 8,
+      "title": "Add game logic to class"
+    },
+    {
+      "file": "src/app/level2/level2.component.ts",
+      "description": "Note how we can group logically connected lines of code in regions. This is useful because we can fold regions if we are currently not interested in them.",
+      "line": 9,
+      "title": "Code regions"
+    },
+    {
+      "file": "src/app/level2/level2.component.ts",
+      "description": "This is how you add structured comments to the code ([read more](https://jsdoc.app/)).",
+      "line": 27,
+      "title": "Structured documentation (JSDoc)"
+    },
+    {
+      "file": "src/app/level2/level2.component.ts",
+      "description": "Note that we use `===` (equal) and `!==` (not equal) in our code. This is **important**. You should not use `==` or `!=` under normal circumstances ([read more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness))",
+      "line": 29,
+      "title": "Strict equality"
+    },
+    {
+      "file": "src/app/level2/level2.component.ts",
+      "description": "Note template literal here ([read more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)).",
+      "line": 30,
+      "title": "Template literals"
+    }
+  ]
+}

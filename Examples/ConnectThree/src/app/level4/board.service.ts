@@ -10,10 +10,10 @@ export class BoardService {
   //#region Internal state variables
 
   /** Gets the winner (1 or 2) or 0 if there is no winner yet. */
-  private currentWinner = 0;
+  private currentWinnerIx = 0;
 
   /** Gets the player (1 or 2) whose turn it currently is. */
-  private currentPlayer!: number;
+  private currentPlayerIx!: number;
 
   //#endregion
 
@@ -23,7 +23,7 @@ export class BoardService {
    * Gets the player (1 or 2) who has won the game.
    * @returns Player (1 or 2), or 0 if there is no winner yet.
    */
-  private getWinner(): number {
+  private getWinnerIndex(): number {
     // Check rows
     for (let row = 0; row < 3; row++) {
       const first = this.boardContent[row][0];
@@ -81,24 +81,24 @@ export class BoardService {
   }
 
   /**
-   * Sets the given cell to the current player ({@link currentPlayer}) and switches the current player.
+   * Sets the given cell to the current player ({@link currentPlayerIx}) and switches the current player.
    *
    * Set operation is ignored if there is already a winner or if the cell is already occupied.
    */
   public set(col: number, row: number): void {
-    if (this.getWinner() === 0 && this.boardContent[row][col] === 0) {
-      this.boardContent[row][col] = this.currentPlayer;
-      this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;
+    if (this.getWinnerIndex() === 0 && this.boardContent[row][col] === 0) {
+      this.boardContent[row][col] = this.currentPlayerIx;
+      this.currentPlayerIx = this.currentPlayerIx === 1 ? 2 : 1;
     }
 
-    this.currentWinner = this.getWinner();
+    this.currentWinnerIx = this.getWinnerIndex();
   }
 
   /**
    * Gets the winner (1 or 2) or 0 if there is no winner yet.
    */
-  public get winner() {
-    return this.currentWinner;
+  public get winnerIndex(): number {
+    return this.currentWinnerIx;
   }
 
   /**
@@ -110,7 +110,7 @@ export class BoardService {
       [0, 0, 0],
       [0, 0, 0],
     ];
-    this.currentPlayer = 1;
-    this.currentWinner = 0;
+    this.currentPlayerIx = 1;
+    this.currentWinnerIx = 0;
   }
 }

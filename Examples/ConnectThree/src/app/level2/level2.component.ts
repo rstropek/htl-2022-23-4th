@@ -12,10 +12,10 @@ export class Level2Component {
   private playerNames = ['', 'X', 'O'];
 
   /** Gets the winner (1 or 2) or 0 if there is no winner yet. */
-  private currentWinner = 0;
+  private currentWinnerIx = 0;
 
   /** Gets the player (1 or 2) whose turn it currently is. */
-  private currentPlayer!: number;
+  private currentPlayerIx!: number;
 
   //#endregion
 
@@ -25,9 +25,9 @@ export class Level2Component {
    * Helper method to get the CSS class of the given player.
    * @returns CSS class of the player (1 or 2), or empty string if the player is 0.
    */
-   private playerToClass(player: number): string {
-    if (player !== 0) {
-      return `occupied-${this.playerNames[player]}`;
+   private playerIndexToClass(playerIx: number): string {
+    if (playerIx !== 0) {
+      return `occupied-${this.playerNames[playerIx]}`;
     }
 
     return '';
@@ -37,7 +37,7 @@ export class Level2Component {
    * Gets the player (1 or 2) who has won the game.
    * @returns Player (1 or 2), or 0 if there is no winner yet.
    */
-  private getWinner(): number {
+  private getWinnerIndex(): number {
     // Check rows
     for (let row = 0; row < 3; row++) {
       const first = this.boardContent[row][0];
@@ -97,36 +97,36 @@ export class Level2Component {
    * @returns CSS class of the player, or empty string if the cell is empty.
    */
   public getStyle(col: number, row: number): string {
-    return this.playerToClass(this.boardContent[row][col]);
+    return this.playerIndexToClass(this.boardContent[row][col]);
   }
 
   /**
    * Gets the player (X or O) who has occupied the given cell.
    * @returns Player (X or O), or empty string if the cell is empty.
    */
-  public getPlayer(col: number, row: number): string {
+  public getPlayerName(col: number, row: number): string {
     return this.playerNames[this.boardContent[row][col]];
   }
 
   /**
-   * Sets the given cell to the current player ({@link currentPlayer}) and switches the current player.
+   * Sets the given cell to the current player ({@link currentPlayerIx}) and switches the current player.
    *
    * Set operation is ignored if there is already a winner or if the cell is already occupied.
    */
   public set(col: number, row: number): void {
-    if (this.currentWinner === 0 && this.boardContent[row][col] === 0) {
-      this.boardContent[row][col] = this.currentPlayer;
-      this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;
+    if (this.currentWinnerIx === 0 && this.boardContent[row][col] === 0) {
+      this.boardContent[row][col] = this.currentPlayerIx;
+      this.currentPlayerIx = this.currentPlayerIx === 1 ? 2 : 1;
     }
 
-    this.currentWinner = this.getWinner();
+    this.currentWinnerIx = this.getWinnerIndex();
   }
 
   /**
    * Gets the winner (1 or 2) or 0 if there is no winner yet.
    */
-  public get winner() {
-    return this.currentWinner;
+  public get winnerIndex(): number {
+    return this.currentWinnerIx;
   }
 
   /**
@@ -138,15 +138,15 @@ export class Level2Component {
       [0, 0, 0],
       [0, 0, 0],
     ];
-    this.currentPlayer = 1;
-    this.currentWinner = 0;
+    this.currentPlayerIx = 1;
+    this.currentWinnerIx = 0;
   }
 
   /**
    * Gets the player (X or O) who has won the game.
    * @returns Player (X or O), or empty string if there is no winner yet.
    */
-  public getWinningPlayer(): string {
-    return this.playerNames[this.currentWinner];
+  public getWinningPlayerName(): string {
+    return this.playerNames[this.currentWinnerIx];
   }
 }

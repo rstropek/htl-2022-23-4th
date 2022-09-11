@@ -5,13 +5,13 @@
     {
       "file": "src/app/level1/level1.component.ts",
       "description": "We create a new Angular Component with:\n\n>> npx ng generate component Level1 --skip-tests\n\nThis component will be our playground for building the basic game board using HTML and CSS.",
-      "line": 2,
+      "line": 3,
       "title": "Create Angular Component"
     },
     {
       "file": "src/app/app.module.ts",
       "description": "If you create a new Angular Component with `ng generate`, the component is automatically added to the main *Angular Module*. Normally, you do not need to do that manually. Only if you manually restructure your app, you have to adjust the Angular Module yourself.",
-      "line": 12,
+      "line": 16,
       "title": "Angular Module"
     },
     {
@@ -23,7 +23,7 @@
     {
       "file": "src/app/app-routing.module.ts",
       "description": "We add the new component to our list of routes. That enables us to jump directly to the component using the URL.\n\nNote that we also define a redirect so that an empty URL path leads us to the *level1* URL.",
-      "line": 7,
+      "line": 11,
       "title": "Adding Routes"
     },
     {
@@ -35,7 +35,7 @@
     {
       "file": "src/app/app.component.html",
       "description": "The content of the currently selected route (derived from URL) is inserted in the `router-outlet` of the main component *app.component*.\n\nTry running your app (`npm start`) and test the routing.",
-      "line": 6,
+      "line": 9,
       "title": "Router Outlet"
     },
     {

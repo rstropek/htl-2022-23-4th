@@ -14,6 +14,6 @@
   </tbody>
 </table>
 
-<h2 *ngIf="board.winner !== 0">The winner is {{board.winner | playerName}}</h2>
+<h2 *ngIf="board.winnerIndex !== 0">The winner is {{board.winnerIndex | playerName}}</h2>
 
 <button (click)="board.restart()">Restart</button>
