@@ -83,7 +83,7 @@ export class BoardService {
   /**
    * Sets the given cell to the current player ({@link currentPlayerIx}) and switches the current player.
    *
-   * Set operation is ignored if there is already a winner or if the cell is already occupied.
+   * This operation is ignored if the cell is already occupied or if the game is already won.
    */
   public set(col: number, row: number): void {
     if (this.getWinnerIndex() === 0 && this.boardContent[row][col] === 0) {

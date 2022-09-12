@@ -1,0 +1,16 @@
+<h1>Level 1</h1>
+
+<table class="connect-four-board">
+  <tbody>
+    <tr>
+      <td *ngFor="let col of boardContent[0]; let colIx = index" class="indicator">
+        <app-column-indicator [columnIndex]="colIx" (drop)="drop($event)"></app-column-indicator>
+      </td>
+    </tr>
+    <tr *ngFor="let row of boardContent">
+      <td *ngFor="let col of row" [class]="'occupied' + col.toString()"></td>
+    </tr>
+  </tbody>
+</table>
+
+<button>Restart</button>

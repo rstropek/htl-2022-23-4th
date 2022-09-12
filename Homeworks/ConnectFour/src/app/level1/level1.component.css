@@ -1,0 +1,32 @@
+table.connect-four-board {
+  border-collapse: collapse;
+}
+
+table.connect-four-board td {
+  --width: 50px;
+
+  border: 1px solid black;
+  width: var(--width);
+  height: var(--width);
+}
+
+table.connect-four-board td.indicator {
+  border: 0;
+}
+
+td {
+  margin: 0;
+  padding: 0;
+}
+
+td.occupied-1 {
+  background-color: red;
+}
+
+td.occupied-2 {
+  background-color: blue;
+}
+
+button {
+  margin-top: 10px;
+}
