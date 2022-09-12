@@ -38,3 +38,8 @@
     ```bash
     npx ng generate service <service-name> --skip-tests
     ```
+
+## Important Angular Resources
+
+* [Angular Documentation](https://angular.io/docs)
+  * Great [tutorial](https://angular.io/tutorial) for self-studying Angular
