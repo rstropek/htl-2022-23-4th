@@ -1,11 +1,11 @@
 path {
-  fill: lightgray;
+  fill: #f0f0f0;
 }
 
-path.player-1:hover {
+.player-1:hover {
   fill: red;
 }
 
-path.player-2:hover {
+.player-2:hover {
   fill: blue;
 }

@@ -33,4 +33,8 @@
     npx ng generate component <component-name> --skip-tests
     ```
 
-* 
+* To add a new service, we use the following command (`--skip-tests` only if you do not want unit tests):
+
+    ```bash
+    npx ng generate service <service-name> --skip-tests
+    ```

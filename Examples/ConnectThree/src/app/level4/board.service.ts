@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 /**
- * Logic for a TicTacTow board.
+ * Logic for a TicTacToe board.
  */
 @Injectable({
   providedIn: 'root',

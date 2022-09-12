@@ -14,11 +14,11 @@ table.tictactoe-board td {
   height: var(--width);
 }
 
-td.occupied-X {
+.occupied-X {
   background-color: red;
 }
 
-td.occupied-O {
+.occupied-O {
   background-color: blue;
 }
 
