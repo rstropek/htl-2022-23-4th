@@ -1,0 +1,21 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "06) Angular Pipes",
+  "steps": [
+    {
+      "file": "src/app/level4/level4.component.ts",
+      "description": "In level 4, the logic for turning player index into a player name was part of the component. This is ok, but not ideal.",
+      "line": 52
+    },
+    {
+      "file": "src/app/level5/pipes.ts",
+      "description": "The better option is to put conversion logic (in our case converting player index into name) in an Angular *Pipe*.",
+      "line": 6
+    },
+    {
+      "file": "src/app/level5/level5.component.html",
+      "description": "Here you see how the pipe is applied. Pipes allow us to structure the code in a very clean way.\n\n* Non-UI-related Logic is in services.\n* View logic is in the component.\n* Conversion is done in pipes.",
+      "line": 11
+    }
+  ]
+}

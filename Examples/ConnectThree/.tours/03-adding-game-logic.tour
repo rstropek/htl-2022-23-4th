@@ -37,6 +37,24 @@
       "description": "Note template literal here ([read more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)).",
       "line": 30,
       "title": "Template literals"
+    },
+    {
+      "file": "src/app/level2/level2.component.html",
+      "description": "`[class]` is called a *class binding* in Angular. The square brackets indicate that the content of the attribute is an Angular expression. In our case, the CSS class name for the `td` element is generated using the `getStyle` function.",
+      "line": 10,
+      "title": "Class binding"
+    },
+    {
+      "file": "src/app/level2/level2.component.html",
+      "description": "`(click)` is called an *event binding* in Angular. You can define what should be done when a certain DOM event (in this case the event *click*) happens.",
+      "line": 11,
+      "title": "Event binding"
+    },
+    {
+      "file": "src/app/level2/level2.component.html",
+      "description": "`{{...}}` is called an *interpolation* in Angular. Angular will replace it with the result of the given Angular expression.",
+      "line": 12,
+      "title": "Interpolation"
     }
   ]
 }

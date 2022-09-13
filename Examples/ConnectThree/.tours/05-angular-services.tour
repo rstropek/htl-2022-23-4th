@@ -1,0 +1,17 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "05) Angular Services",
+  "steps": [
+    {
+      "file": "src/app/level4/board.service.ts",
+      "description": "Angular services (marked with `@Injectable`) contain logic (e.g. game logic, business logic, validation logic, data access logic, etc.). In contrast to components, services don't have a user interfaces.",
+      "line": 8,
+      "title": "Create Angular service"
+    },
+    {
+      "file": "src/app/level4/level4.component.ts",
+      "description": "A component can request a defined services as a constructor parameter.",
+      "line": 37
+    }
+  ]
+}

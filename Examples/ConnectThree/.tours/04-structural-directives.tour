@@ -1,0 +1,50 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "04) Structural directives",
+  "steps": [
+    {
+      "file": "src/app/level3/level3.component.html",
+      "description": "Until now, we manually copied table rows and cells. That is not necessary. Angular can repeat HTML elements based on templates using `*ngFor`. Directives like this are called *structural directives* in Angular.",
+      "line": 9,
+      "selection": {
+        "start": {
+          "line": 10,
+          "character": 105
+        },
+        "end": {
+          "line": 10,
+          "character": 110
+        }
+      },
+      "title": "ngFor loop"
+    },
+    {
+      "file": "src/app/level3/level3.component.html",
+      "description": "Here you see a nested `*ngFor`-loop. Note that the loop variable `row` is used in the nested loop.",
+      "line": 10,
+      "title": "Nested ngFor loop"
+    },
+    {
+      "file": "src/app/level3/level3.component.ts",
+      "description": "Components can extend other components. In this case, the component for level 3 extend the code that we have written in level 2.",
+      "line": 24,
+      "selection": {
+        "start": {
+          "line": 16,
+          "character": 3
+        },
+        "end": {
+          "line": 16,
+          "character": 8
+        }
+      },
+      "title": "TS Inheritance"
+    },
+    {
+      "file": "src/app/level3/level3.component.ts",
+      "description": "This is how we can call the base class' constructor.",
+      "line": 29,
+      "title": "Call base class ctor"
+    }
+  ]
+}

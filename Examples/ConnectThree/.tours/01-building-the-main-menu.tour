@@ -34,7 +34,7 @@
     },
     {
       "file": "src/app/app.component.css",
-      "description": "Here we use a *CSS Type Selector* to format all `ul` elements.",
+      "description": "Here we use a *CSS Type Selector* to format all `ul` elements. As this is a **local** CSS file, only `ul`-elements in *app.component.html* are changed.",
       "line": 4,
       "title": "CSS Type Selector"
     },

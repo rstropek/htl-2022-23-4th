@@ -34,7 +34,7 @@
     },
     {
       "file": "src/app/app.component.html",
-      "description": "The content of the currently selected route (derived from URL) is inserted in the `router-outlet` of the main component *app.component*.\n\nTry running your app (`npm start`) and test the routing.",
+      "description": "The content of the currently selected route (derived from URL) is inserted in the `router-outlet` of the main component *app.component*.\n\nTry running your app and test the routing:\n\n>> npm start",
       "line": 9,
       "title": "Router Outlet"
     },
@@ -46,7 +46,7 @@
     },
     {
       "file": "src/app/level1/level1.component.css",
-      "description": "This is a *CSS Class Selector*. You will see how to apply the style in HTML in a moment.",
+      "description": "This is a *CSS Class Selector*. You will see how to apply the style in HTML in a moment. Because of the `table` in front of the `.tictactoe-board` class name, only **tables** with this class are formatted.",
       "line": 4,
       "title": "CSS Class Selector"
     },
