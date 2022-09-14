@@ -12,11 +12,10 @@
 | 14.10.2022     |                                            |
 | 20./21.10.2022 |                                            |
 | 27./28.10.2022 | No School                                  |
-| 03./04.11.2022 |                                            |
+| 03.11.2022     |                                            |
+| 04.11.2022     | **Written Exam (Angular Fundamentals)**    |
 | 10.11.2022     |                                            |
 | 11.11.2022     | Replacement lesson                         |
-| 10.11.2022     |                                            |
-| 11.11.2022     | **Written Exam (Angular Fundamentals)**    |
 | 17./18.11.2022 |                                            |
 | 24.11.2022     | *Firmeninformationstag*                    |
 | 25.11.2022     | Optional: **Exam Repetition**              |
