@@ -16,9 +16,9 @@
 | 04.11.2022     | **Written Exam (Angular Fundamentals)**    |
 | 10.11.2022     |                                            |
 | 11.11.2022     | Replacement lesson                         |
-| 17./18.11.2022 |                                            |
+| 17./18.11.2022 | Optional: **Exam Repetition**              |
 | 24.11.2022     | *Firmeninformationstag*                    |
-| 25.11.2022     | Optional: **Exam Repetition**              |
+| 25.11.2022     |                                            |
 | 01.12.2022     |                                            |
 | 02.12.2022     | *Stichtag Frühwarnungen*                   |
 | 08.12.2022     | No School                                  |
