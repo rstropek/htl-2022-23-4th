@@ -1,4 +1,18 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations": [
+    "johnpapa.angular-essentials",
+    "usernamehw.errorlens",
+    "nrwl.angular-console",
+    "vsls-contrib.codetour",
+    "wayou.vscode-todo-highlight",
+    "humao.rest-client"
+  ],
+
+	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+	"unwantedRecommendations": [
+	]
 }

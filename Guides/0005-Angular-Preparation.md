@@ -10,6 +10,7 @@
   * [Nx Console](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
   * [Code Tour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
   * [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+  * [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 * [Git CLI](https://git-scm.com/)
 * [Node.js](https://nodejs.org/en/)
 * [Angular CLI](https://angular.io/cli)
