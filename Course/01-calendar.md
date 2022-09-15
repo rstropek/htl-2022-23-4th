@@ -15,7 +15,7 @@
 | 03.11.2022     |                                            |
 | 04.11.2022     | **Written Exam (Angular Fundamentals)**    |
 | 10.11.2022     |                                            |
-| 11.11.2022     | Replacement lesson                         |
+| 11.11.2022     | Replacement lesson (CCC School Edition?)   |
 | 17./18.11.2022 | Optional: **Exam Repetition**              |
 | 24.11.2022     | *Firmeninformationstag*                    |
 | 25.11.2022     |                                            |
