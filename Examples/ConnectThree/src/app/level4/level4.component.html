@@ -7,11 +7,11 @@
 <table class="tictactoe-board">
   <tbody>
     <tr *ngFor="let row of content; let rowIx = index">
-      <td *ngFor="let col of row; let colIx = index" [class]="col.class" (click)="board.set(colIx, rowIx)">{{col.playerName}}</td>
+      <td *ngFor="let col of row; let colIx = index" [class]="col.class" [attr.data-row]="rowIx" [attr.data-col]="colIx" (click)="board.set(colIx, rowIx)">{{col.playerName}}</td>
     </tr>
   </tbody>
 </table>
 
-<h2 *ngIf="board.winnerIndex !== 0">The winner is {{getWinningPlayer()}}</h2>
+<h2 *ngIf="board.winnerIndex !== 0" data-testid="winner">The winner is {{getWinningPlayer()}}</h2>
 
-<button (click)="board.restart()">Restart</button>
+<button (click)="board.restart()" data-testid="restart">Restart</button>
