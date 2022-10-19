@@ -1,0 +1,14 @@
+<div class="card">
+  <app-ticket-qrcode [ticketLink]="'../tickets/' + ticket?.id"></app-ticket-qrcode>
+  <div class="card-body">
+      <h5 class="card-title">{{ticket?.passenger}}</h5>
+      <p class="card-text">
+          This Ticket is for <span class="highlight">{{ticket?.passenger}}</span> to travel
+          from <span class="highlight">{{ticket?.from}} to {{ticket?.to}}</span>
+          on <span class="highlight">{{ticket?.date | date:'mediumDate'}}</span>
+      </p>
+  </div>
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item">Price: {{ticket?.price | number:'.2'}}</li>
+  </ul>
+</div>

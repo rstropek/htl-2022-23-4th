@@ -1,0 +1,4 @@
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" [class.bg-info]="timeRelation === eTimeRelation.Past" (click)="onClick(eTimeRelation.Past)">Past Travels</button>
+  <button type="button" class="btn btn-secondary" [class.bg-info]="timeRelation === eTimeRelation.Upcoming" (click)="onClick(eTimeRelation.Upcoming)">Upcoming Travels</button>
+</div>
