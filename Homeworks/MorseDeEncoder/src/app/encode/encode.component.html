@@ -3,5 +3,8 @@
 <form>
     <input type="text" id="input" [(ngModel)]="input" name="input" />
     <button type="button" (click)="onEncode()" [disabled]="!encoder.canEncode(input)">Encode</button>
-    <input type="text" id="result" readonly [value]="morseCode" />
+    <div>
+        <input type="text" id="result" readonly [value]="morseCode" />
+        <button type="button" (click)="onPlay()">Play</button>
+    </div>
 </form>
