@@ -1,0 +1,11 @@
+<h1>Morse Code to Text</h1>
+
+<form>
+    <input type="text" id="input" [(ngModel)]="input" name="input" />
+    <button type="button" (click)="onDecode()" [disabled]="!decoder.canDecode(input)">Decode</button>
+    <input type="text" id="result" readonly [value]="plainText" />
+</form>
+
+<p id="errorMessage" [hidden]="!errorMessage">
+    {{errorMessage}}
+</p>

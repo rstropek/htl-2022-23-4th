@@ -1,0 +1,7 @@
+<h1>Text to Morse Code</h1>
+
+<form>
+    <input type="text" id="input" [(ngModel)]="input" name="input" />
+    <button type="button" (click)="onEncode()" [disabled]="!encoder.canEncode(input)">Encode</button>
+    <input type="text" id="result" readonly [value]="morseCode" />
+</form>
