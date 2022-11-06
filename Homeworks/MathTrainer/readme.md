@@ -10,7 +10,7 @@ Your job is to implement a math trainer for elementary school students.
 
 * Students can configure the math trainer.
 * They can define **how many digits** they can handle in numbers (e.g. 1 digit would result in exercises like *5 \* 7 = 35*, 2 digits would result in exercises like *53 + 12 = 65*, etc.). Possible values are 1, 2, 3, or 4. The default value for this setting is 1.
-* The students can define **how many questions** they want to have in one exercise. Possible are values between 5 and 20. The default value for this setting is 1.
+* The students can define **how many questions** they want to have in one exercise. Possible are values between 5 and 20. The default value for this setting is 10.
 * They can choose **which operators** they want to practice. They can choose between one and four out of addition, subtraction, multiplication, division. By default, all operators are used.
 * The setting screen must ensure that the user has chosen a valid configuration (e.g. not more than 4 digits, at least one operator, etc.).
 
