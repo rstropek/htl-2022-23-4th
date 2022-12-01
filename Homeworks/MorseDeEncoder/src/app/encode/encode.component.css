@@ -1,0 +1,15 @@
+#result {
+    margin-top: 25px;
+    background-color: lightgray;
+    width: 90%;
+    max-width: 350px;
+}
+
+#input {
+    width: 90%;
+    max-width: 350px;
+}
+
+button {
+    margin-left: 5px;
+}
