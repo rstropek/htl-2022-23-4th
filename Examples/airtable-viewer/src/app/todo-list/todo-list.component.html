@@ -1,0 +1,53 @@
+<h2>Our Data</h2>
+
+<label>
+  Only undone items
+  <input type="checkbox" [(ngModel)]="onlyUndone">
+</label>
+<button (click)="refresh()">Refresh</button>
+
+<p *ngIf="!loading && data?.records?.length === 0, else table">
+  You have no todo items, enjoy the day 😎!
+</p>
+<ng-template #table>
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Assigned&nbsp;to</th>
+        <th>Done</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data?.records">
+        <td>{{row.fields.Description}}</td>
+        <td>{{row.fields.AssignedTo}}</td>
+        <td><input type="checkbox" [checked]="row.fields.Done" disabled></td>
+        <td><button (click)="delete(row.id!)">Delete</button>
+          <button (click)="switchToEditMode(row)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+<p *ngIf="loading">Loading...</p>
+
+<h2>{{ editItemId ? 'Edit' : 'Add' }} Item</h2>
+
+<form #f="ngForm">
+  <label>
+    Description:<br />
+    <input type="text" [(ngModel)]="currentItem.Description" required name="description">
+  </label>
+  <label>
+    Assigned to:<br />
+    <input type="text" [(ngModel)]="currentItem.AssignedTo" required name="assignedTo">
+  </label>
+  <label>
+    Done:<br />
+    <input type="checkbox" [(ngModel)]="currentItem.Done" name="done">
+  </label>
+  <button [disabled]="!f.valid || f.pristine" (click)="save()">Save</button>
+  <button [hidden]="!editItemId" (click)="clearCurrentItem()">Cancel</button>
+</form>

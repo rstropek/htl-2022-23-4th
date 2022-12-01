@@ -1,0 +1,19 @@
+table {
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+td {
+  border: 1px solid black;
+}
+
+th {
+  border: 1px solid black;
+  background-color: lightgray;
+
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
