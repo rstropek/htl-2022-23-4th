@@ -1,0 +1,4 @@
+@host = http://localhost:5110
+
+###
+POST {{host}}/drones/100000/activate

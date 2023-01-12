@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="drone-fores.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:export-ydpi="209"
+   inkscape:export-xdpi="209"
+   inkscape:export-filename="C:\temp\drone-forest.png"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 124.44621 110.3556"
+   height="110.3556mm"
+   width="124.44621mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="1129"
+     inkscape:window-width="1920"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="283.61599"
+     inkscape:cx="343.70337"
+     inkscape:zoom="1.979899"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-12.169794,-34.176997)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       y="51.809498"
+       x="35.934502"
+       height="74.735001"
+       width="74.735001"
+       id="rect859"
+       style="fill:#e7ffe9;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:0.794999, 0.794999;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000" />
+    <rect
+       y="39.309498"
+       x="23.4345"
+       height="99.735001"
+       width="99.735001"
+       id="rect833"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-opacity:1;stop-color:#000000" />
+    <path
+       id="path835"
+       d="M 18.301999,89.176998 H 128.302"
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.795, 0.795;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.795, 0.795;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 73.302,34.176997 V 144.177"
+       id="path837" />
+    <text
+       id="text841"
+       y="87.690483"
+       x="74.083328"
+       style="font-size:3.52778px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-size:3.52778px;stroke-width:0.264583"
+         y="87.690483"
+         x="74.083328"
+         id="tspan839"
+         sodipodi:role="line">0/0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="12.662197"
+       y="37.041676"
+       id="text845"><tspan
+         sodipodi:role="line"
+         id="tspan843"
+         x="12.662197"
+         y="37.041676"
+         style="font-size:3.52778px;stroke-width:0.264583">-1000/-1000</tspan></text>
+    <text
+       id="text849"
+       y="144.00894"
+       x="11.906244"
+       style="font-size:3.52778px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-size:3.52778px;stroke-width:0.264583"
+         y="144.00894"
+         x="11.906244"
+         id="tspan847"
+         sodipodi:role="line">-1000/+1000</tspan></text>
+    <text
+       id="text853"
+       y="37.041676"
+       x="112.25893"
+       style="font-size:3.52778px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-size:3.52778px;stroke-width:0.264583"
+         y="37.041676"
+         x="112.25893"
+         id="tspan851"
+         sodipodi:role="line">+1000/-1000</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52778px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="111.50297"
+       y="144.00894"
+       id="text857"><tspan
+         sodipodi:role="line"
+         id="tspan855"
+         x="111.50297"
+         y="144.00894"
+         style="font-size:3.52778px;stroke-width:0.264583">+1000/+1000</tspan></text>
+    <text
+       id="text863"
+       y="55.37352"
+       x="37.230648"
+       style="font-size:2.82222px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-size:2.82222px;stroke-width:0.264583"
+         y="55.37352"
+         x="37.230648"
+         id="tspan861"
+         sodipodi:role="line">Flight area</tspan><tspan
+         id="tspan865"
+         style="font-size:2.82222px;stroke-width:0.264583"
+         y="58.901295"
+         x="37.230648"
+         sodipodi:role="line">(-750/-750 to</tspan><tspan
+         id="tspan867"
+         style="font-size:2.82222px;stroke-width:0.264583"
+         y="62.42907"
+         x="37.230648"
+         sodipodi:role="line">+750/+750)</tspan></text>
+    <rect
+       y="106.39168"
+       x="91.975037"
+       height="25"
+       width="25"
+       id="rect871"
+       style="fill:#ffd9d9;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-miterlimit:4;stroke-dasharray:0.794999, 0.794999;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000" />
+    <circle
+       r="0.5"
+       cy="118.89168"
+       cx="104.47504"
+       id="path869"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264997;stroke-miterlimit:4;stroke-dasharray:0.795, 0.795;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.11667px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="92.689072"
+       y="109.4956"
+       id="text879"><tspan
+         sodipodi:role="line"
+         id="tspan873"
+         x="92.689072"
+         y="109.4956"
+         style="font-size:2.11667px;stroke-width:0.264583">Scan area</tspan><tspan
+         sodipodi:role="line"
+         x="92.689072"
+         y="112.14143"
+         style="font-size:2.11667px;stroke-width:0.264583"
+         id="tspan877">(+/- 250 around</tspan><tspan
+         id="tspan883"
+         sodipodi:role="line"
+         x="92.689072"
+         y="114.78727"
+         style="font-size:2.11667px;stroke-width:0.264583">drone position)</tspan></text>
+  </g>
+</svg>
