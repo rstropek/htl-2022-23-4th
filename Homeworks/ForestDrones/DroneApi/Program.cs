@@ -34,6 +34,7 @@ builder.Services.AddScoped<IValidator<Position>, FlyToTargetValidator>();
 
 var app = builder.Build();
 
+app.UseCors();
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
