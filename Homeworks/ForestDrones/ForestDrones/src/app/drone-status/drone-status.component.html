@@ -1,0 +1,30 @@
+<div *ngIf="drones">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Status</th>
+        <th scope="col">Position</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let drone of drones">
+        <td>{{ drone.id }}</td>
+        <td><input type="checkbox" [checked]="drone.isActive" /></td>
+        <td>
+          <div *ngIf="drone.position">
+            {{ drone.position.x }}/{{ drone.position.y }}
+          </div>
+        </td>
+        <td>
+          <button class="btn btn-primary" [hidden]="drone.isActive"
+            (click)="activate(drone.id)">Activate</button>
+          <button class="btn btn-primary" [hidden]="!drone.isActive"
+          (click)="shutdown(drone.id)">Shutdown</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

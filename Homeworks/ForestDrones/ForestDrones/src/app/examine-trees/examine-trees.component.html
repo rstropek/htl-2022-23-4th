@@ -1,0 +1,50 @@
+<p *ngIf="droneIds === undefined">Loading...</p>
+
+<p *ngIf="droneIds?.length === 0">
+  No drones are active. <a routerLink="/drones">Activate</a> at least one drone
+  to examine trees.
+</p>
+
+<div *ngIf="droneIds?.length ?? 0 > 0">
+  <form>
+    <div class="mb-3">
+      <label for="xPos" class="form-label">X Position:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="xPos"
+        name="xPos"
+        [(ngModel)]="pos.x"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="yPos" class="form-label">Y Position</label>
+      <input
+        type="number"
+        class="form-control"
+        id="yPos"
+        name="yPos"
+        [(ngModel)]="pos.y"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="drone" class="form-label">Drone</label>
+      <select class="form-select" name="drone" [(ngModel)]="selectedDroneId">
+        <option *ngFor="let id of droneIds" [value]="id">Drone {{ id }}</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="findNearestTree()"
+      [disabled]="scanning">Find nearest damaged tree</button>
+  </form>
+  <p class="result" [hidden]="!scanning">Scanning...</p>
+  <div class="result" *ngIf="!scanning && treePosAbsolute && treePosRelative">
+    <p class="result" *ngIf="!scanning && treePosAbsolute && treePosRelative">
+      Nearest damaged tree is at {{ treePosAbsolute.x }}/{{ treePosAbsolute.y }}.
+      It is {{ treePosRelative.x }}, {{ treePosRelative.y }} from the drone.
+    </p>
+    <button type="button" class="btn btn-primary" (click)="markAsExamined()">Mark as examined</button>
+    <button type="button" class="btn btn-primary btn-left-margin" (click)="goToNextTree()">
+      Fly to this tree and scan
+    </button>
+  </div>
+</div>
