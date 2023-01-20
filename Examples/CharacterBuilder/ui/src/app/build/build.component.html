@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-6 form">
+    <form>
+      <div class="mb-3">
+        <label for="eye" class="form-label">Eye:</label>
+        <select class="form-select" id="eye" name="eye" [(ngModel)]="imageOptions.eye">
+          <option value="NoEye">No Eye</option>
+          <option value="HalfOpen">Half Open</option>
+          <option value="Closed">Closed</option>
+          <option value="Open">Open</option>
+        </select>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="hasHammer" name="hasHammer" [(ngModel)]="imageOptions.hasHammer" />
+        <label for="hasHammer" class="form-check-label">Has Hammer</label>
+      </div>
+      <div class="mb-3">
+        <label for="mouth" class="form-label">Mouth:</label>
+        <select class="form-select" id="mouth" name="mouth" [(ngModel)]="imageOptions.mouth">
+          <option value="NoMouth">No Mouth</option>
+          <option value="Happy">Happy</option>
+          <option value="Normal">Normal</option>
+          <option value="Unhappy">Unhappy</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="rightHand" class="form-label">Right Hand:</label>
+        <select class="form-select" id="rightHand" name="rightHand" [(ngModel)]="imageOptions.rightHand">
+          <option value="NoHand">No Hand</option>
+          <option value="Normal">Normal</option>
+          <option value="Victory">Victory</option>
+        </select>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="hasTail" name="hasTail" [(ngModel)]="imageOptions.hasTail" />
+        <label for="hasTail" class="form-check-label">Has Tail</label>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="ngOnInit()">Build image</button>
+      <button type="button" class="btn btn-primary btn-margin-left" (click)="randomOptions()">Feeling lucky...</button>
+    </form>
+  </div>
+  <div class="col-6">
+    <img *ngIf="imageUrl" [src]="imageUrl + '?scale=0.5'" class="img-fluid">
+  </div>
+</div>

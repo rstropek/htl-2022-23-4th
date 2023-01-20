@@ -1,0 +1,8 @@
+<div *ngIf="imageUrl" class="top">
+  <div class="buttons">
+    <button type="button" class="btn btn-primary" (click)="zoomIn()">+</button>
+    <button type="button" class="btn btn-primary btn-margin-left" (click)="zoomOut()">-</button>
+    <button type="button" class="btn btn-primary btn-margin-left" (click)="next()">Next</button>
+  </div>
+  <img [src]="imageUrl + '?scale=' + scale" [width]="imageWidth" [height]="imageHeight">
+</div>

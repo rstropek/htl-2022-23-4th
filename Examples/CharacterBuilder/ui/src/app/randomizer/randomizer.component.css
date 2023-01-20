@@ -1,0 +1,16 @@
+.btn-margin-left {
+  margin-left: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
