@@ -1,0 +1,12 @@
+# @name build
+POST http://localhost:5249/build-image-url
+Content-Type: application/json
+
+{
+  "color": "red",
+  "body": "F",
+  "leg": "C"
+}
+
+###
+GET {{build.response.headers.Location}}
