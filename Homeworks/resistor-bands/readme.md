@@ -19,3 +19,9 @@ In this exercise, you have to build a web API that helps makers to do calculatio
 * Use C# and ASP.NET Core 7
 
 * Tip: Try to put the calculation logic into a *service* class using [*Dependency Injection*](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-7.0#access-the-dependency-injection-di-container).
+
+## Extra Exercise
+
+* Implement a simple Angular client for the API.
+
+* Still not enough? Try to [generate a *TypeScript Angular* client for the OAS document](https://openapi-generator.tech/#try) and use it in your Angular app.
