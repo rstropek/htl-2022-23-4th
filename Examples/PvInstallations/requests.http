@@ -1,0 +1,47 @@
+@host=http://localhost:5121
+
+###
+POST {{host}}/installations
+Content-Type: application/json
+
+{  
+  "longitude": 16.3738,  
+  "latitude": 48.2082,  
+  "address": "Sonnenstraße 1, 1010 Wien, Österreich",  
+  "ownerName": "Max Mustermann",  
+  "comments": "Neue Installation in Wien"  
+}  
+
+###
+POST {{host}}/installations
+Content-Type: application/json
+ 
+{  
+  "Longitude": 14.2906,  
+  "Latitude": 48.3064,  
+  "Address": "Solarweg 5, 4020 Linz, Österreich",  
+  "OwnerName": "Anna Müller"  
+}  
+
+###
+POST {{host}}/installations/2/deactivate
+
+###
+POST {{host}}/installations/2/reports
+Content-Type: application/json
+
+{  
+  "producedWattage": 3500,  
+  "householdWattage": 2000,  
+  "batteryWattage": 1000,  
+  "gridWattage": 500  
+}  
+
+###
+GET {{host}}/installations/2/reports?timestamp=2023-05-25T17:19:00&duration=13
+
+###
+GET {{host}}/installations/2/timeline?startTimestamp=2023-05-25T17:19:00&duration=130&page=3
+
+###
+GET {{host}}/installations/2/chart?startTimestamp=2023-05-25T18:00:00&duration=130&page=1
