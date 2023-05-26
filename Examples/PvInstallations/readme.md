@@ -1,5 +1,7 @@
 # Programming Exercise
 
+![PV Installation](./hero-image.png)
+
 This exercise will require you to create an *ASP.NET Core Minimal API* with *Entity Framework Core* for maintaining a photovoltaic installations database. The database will store data related to photovoltaic installations, and the API will expose endpoints for creating, updating, and querying this data.
 
 ## Requirements
@@ -125,3 +127,7 @@ var bytes = img.GetImageBytes();
 
 return Results.File(bytes, "image/png");
 ```
+
+## Sample Solution
+
+You can find a sample solution in [https://github.com/rstropek/htl-2022-23-4th/tree/main/Examples/PvInstallations/solution](https://github.com/rstropek/htl-2022-23-4th/tree/main/Examples/PvInstallations/solution).
