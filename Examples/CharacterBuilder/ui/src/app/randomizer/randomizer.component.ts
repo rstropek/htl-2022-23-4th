@@ -3,12 +3,12 @@ import {
   CharacterImageService,
   ImageOptions,
 } from '../character-image.service';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-favorites',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './randomizer.component.html',
   styleUrls: ['./randomizer.component.css'],
 })

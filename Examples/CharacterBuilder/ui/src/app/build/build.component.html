@@ -40,6 +40,8 @@
     </form>
   </div>
   <div class="col-6">
-    <img *ngIf="imageUrl" [src]="imageUrl + '?scale=0.5'" class="img-fluid">
+    @if (imageUrl) {
+      <img [src]="imageUrl + '?scale=0.5'" class="img-fluid">
+    }
   </div>
 </div>

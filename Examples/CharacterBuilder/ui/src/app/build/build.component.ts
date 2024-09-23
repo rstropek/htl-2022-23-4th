@@ -4,12 +4,12 @@ import {
   ImageOptions,
 } from '../character-image.service';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-build',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './build.component.html',
   styleUrls: ['./build.component.css'],
 })
