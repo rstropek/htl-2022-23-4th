@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { map, Observable, zip } from 'rxjs';
-import { BASE_URL } from './app.module';
+import { BASE_URL } from './app.config';
 
 export type ImageOptions = {
   eye: 'NoEye' | 'HalfOpen' | 'Closed' | 'Open';

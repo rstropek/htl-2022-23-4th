@@ -11,13 +11,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/character-builder",
+            "outputPath": {
+              "base": "dist/character-builder"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -28,7 +30,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "browser": "src/main.ts"
           },
           "configurations": {
             "production": {
@@ -44,12 +47,18 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              }
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -61,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "CharacterBuilder:build:production"
+              "buildTarget": "CharacterBuilder:build:production"
             },
             "development": {
-              "browserTarget": "CharacterBuilder:build:development"
+              "buildTarget": "CharacterBuilder:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CharacterBuilder:build"
+            "buildTarget": "CharacterBuilder:build"
           }
         },
         "test": {
@@ -80,7 +89,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [

@@ -3,9 +3,13 @@ import {
   CharacterImageService,
   ImageOptions,
 } from '../character-image.service';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-build',
+  standalone: true,
+  imports: [FormsModule, CommonModule],
   templateUrl: './build.component.html',
   styleUrls: ['./build.component.css'],
 })
