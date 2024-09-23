@@ -3,6 +3,8 @@
 <div id="ticket-list">
   <app-time-selector [(timeRelation)]="time"></app-time-selector>
   <div class="row">
-    <app-ticket-card *ngFor="let t of tickets" [ticket]="t" class="d-flex align-items-stretch"></app-ticket-card>
+    @for (t of tickets; track t.id) {
+      <app-ticket-card [ticket]="t" class="d-flex align-items-stretch"></app-ticket-card>
+    }
   </div>
 </div>

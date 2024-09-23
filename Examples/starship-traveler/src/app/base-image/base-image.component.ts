@@ -2,6 +2,7 @@ import { Component, Inject, Input } from '@angular/core';
 
 @Component({
   selector: 'app-base-image',
+  standalone: true,
   templateUrl: './base-image.component.html',
   styleUrls: ['./base-image.component.css']
 })

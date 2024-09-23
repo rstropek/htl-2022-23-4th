@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { demoTickets, Ticket } from '../data';
+import { BaseImageComponent } from '../base-image/base-image.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-ticket-details',
+  standalone: true,
+  imports: [BaseImageComponent, CommonModule],
   templateUrl: './ticket-details.component.html',
   styleUrls: ['./ticket-details.component.css']
 })

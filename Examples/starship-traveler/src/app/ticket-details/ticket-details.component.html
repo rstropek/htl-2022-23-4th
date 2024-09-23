@@ -1,19 +1,21 @@
 <div class="ticket-details">
   <h1>Your Ticket {{ticket?.id}}</h1>
 
-  <div *ngIf="ticket?.from && ticket?.to" class="route">
-    <app-base-image [base]="ticket?.from ?? ''"></app-base-image>
+  @if (ticket?.from && ticket?.to) {
+    <div class="route">
+      <app-base-image [base]="ticket?.from ?? ''"></app-base-image>
+      <svg width="24" height="24" viewBox="0 0 24 24" class="arrow">
+        <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" />
+      </svg>
+      <app-base-image [base]="ticket?.to ?? ''"></app-base-image>
+    </div>
+  }
 
-    <svg width="24" height="24" viewBox="0 0 24 24" class="arrow">
-      <path d="M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z" />
-    </svg>
-
-    <app-base-image [base]="ticket?.to ?? ''"></app-base-image>
-  </div>
-
-  <div class="details" *ngIf="ticket">
-    <h2>Passenger: {{ticket.passenger}}</h2>
-    <h3>Date: {{ticket.date | date:'mediumDate'}}</h3>
-    <h3>Price: {{ticket.price | number:'.2'}}</h3>
-  </div>
+  @if (ticket) {
+    <div class="details">
+      <h2>Passenger: {{ticket.passenger}}</h2>
+      <h3>Date: {{ticket.date | date:'mediumDate'}}</h3>
+      <h3>Price: {{ticket.price | number:'.2'}}</h3>
+    </div>
+  }
 </div>

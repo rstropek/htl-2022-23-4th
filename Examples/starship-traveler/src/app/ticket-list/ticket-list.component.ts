@@ -1,9 +1,12 @@
 import { Component, Inject } from '@angular/core';
 import { Ticket } from '../data';
-import { TimeRelation } from '../time-selector/time-selector.component';
+import { TimeRelation, TimeSelectorComponent } from '../time-selector/time-selector.component';
+import { TicketCardComponent } from '../ticket-card/ticket-card.component';
 
 @Component({
   selector: 'app-ticket-list',
+  standalone: true,
+  imports: [TimeSelectorComponent, TicketCardComponent],
   templateUrl: './ticket-list.component.html',
   styleUrls: ['./ticket-list.component.css'],
 })
