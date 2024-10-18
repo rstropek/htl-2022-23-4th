@@ -1,13 +1,17 @@
 import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable } from '@angular/core';
-import { map, Observable, zip } from 'rxjs';
+import { inject, Injectable } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 import { BASE_URL } from './app.config';
 
+export type Eye = 'NoEye' | 'HalfOpen' | 'Closed' | 'Open';
+export type Mouth = 'NoMouth' | 'Happy' | 'Normal' | 'Unhappy';
+export type RightHand = 'NoHand' | 'Normal' | 'Victory';
+
 export type ImageOptions = {
-  eye: 'NoEye' | 'HalfOpen' | 'Closed' | 'Open';
+  eye: Eye;
   hasHammer: boolean;
-  mouth: 'NoMouth' | 'Happy' | 'Normal' | 'Unhappy';
-  rightHand: 'NoHand' | 'Normal' | 'Victory';
+  mouth: Mouth;
+  rightHand: RightHand;
   hasTail: boolean;
 };
 
@@ -19,23 +23,14 @@ export type BuildImageResponse = {
   providedIn: 'root',
 })
 export class CharacterImageService {
-  constructor(
-    private httpClient: HttpClient,
-    @Inject(BASE_URL) private baseUrl: string
-  ) {}
+  private readonly httpClient = inject(HttpClient);
+  private readonly baseUrl = inject(BASE_URL);
 
-  public buildImage(
-    imageOptions: ImageOptions
-  ): Observable<BuildImageResponse> {
-    return this.httpClient.post<BuildImageResponse>(
-      `${this.baseUrl}/build-image-url`,
-      imageOptions
-    );
+  public buildImage(imageOptions: ImageOptions): Promise<BuildImageResponse> {
+    return firstValueFrom(this.httpClient.post<BuildImageResponse>(`${this.baseUrl}/build-image-url`, imageOptions));
   }
 
-  public getRandomImageOptions(): Observable<ImageOptions> {
-    return this.httpClient.get<ImageOptions>(
-      `${this.baseUrl}/get-random-image-options`
-    );
+  public getRandomImageOptions(): Promise<ImageOptions> {
+    return firstValueFrom(this.httpClient.get<ImageOptions>(`${this.baseUrl}/get-random-image-options`));
   }
 }

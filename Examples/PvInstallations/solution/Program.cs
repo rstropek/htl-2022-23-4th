@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using ScottPlot;
@@ -150,6 +151,17 @@ app.MapGet("/installations/{id}/chart", async (int id, DateTime startTimestamp, 
     var bytes = img.GetImageBytes();
 
     return Results.File(bytes, "image/png");
+});
+
+app.MapGet("/efplayground", async (PvDbContext dbContext) =>
+{
+    Func<int, int> addFive = (int x) => x + 5;
+    Expression<Func<int, int>> addFiveEx = (int x) => x + 5;
+
+    var installations = await dbContext.PvInstallations
+        .Where(i => i.OwnerName.StartsWith("Foo"))
+        .ToArrayAsync();
+    System.Console.WriteLine(installations.Length);
 });
 
 async Task<IEnumerable<ProductionReport>> GetTimeline(int id, DateTime startTimestamp, int duration, int page, PvDbContext dbContext)

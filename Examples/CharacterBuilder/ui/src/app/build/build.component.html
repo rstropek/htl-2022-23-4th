@@ -3,7 +3,7 @@
     <form>
       <div class="mb-3">
         <label for="eye" class="form-label">Eye:</label>
-        <select class="form-select" id="eye" name="eye" [(ngModel)]="imageOptions.eye">
+        <select class="form-select" id="eye" name="eye" [(ngModel)]="eye">
           <option value="NoEye">No Eye</option>
           <option value="HalfOpen">Half Open</option>
           <option value="Closed">Closed</option>
@@ -11,12 +11,12 @@
         </select>
       </div>
       <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="hasHammer" name="hasHammer" [(ngModel)]="imageOptions.hasHammer" />
+        <input type="checkbox" class="form-check-input" id="hasHammer" name="hasHammer" [(ngModel)]="hasHammer" />
         <label for="hasHammer" class="form-check-label">Has Hammer</label>
       </div>
       <div class="mb-3">
         <label for="mouth" class="form-label">Mouth:</label>
-        <select class="form-select" id="mouth" name="mouth" [(ngModel)]="imageOptions.mouth">
+        <select class="form-select" id="mouth" name="mouth" [(ngModel)]="mouth">
           <option value="NoMouth">No Mouth</option>
           <option value="Happy">Happy</option>
           <option value="Normal">Normal</option>
@@ -25,14 +25,14 @@
       </div>
       <div class="mb-3">
         <label for="rightHand" class="form-label">Right Hand:</label>
-        <select class="form-select" id="rightHand" name="rightHand" [(ngModel)]="imageOptions.rightHand">
+        <select class="form-select" id="rightHand" name="rightHand" [(ngModel)]="rightHand">
           <option value="NoHand">No Hand</option>
           <option value="Normal">Normal</option>
           <option value="Victory">Victory</option>
         </select>
       </div>
       <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="hasTail" name="hasTail" [(ngModel)]="imageOptions.hasTail" />
+        <input type="checkbox" class="form-check-input" id="hasTail" name="hasTail" [(ngModel)]="hasTail" />
         <label for="hasTail" class="form-check-label">Has Tail</label>
       </div>
       <button type="button" class="btn btn-primary" (click)="ngOnInit()">Build image</button>
@@ -40,8 +40,8 @@
     </form>
   </div>
   <div class="col-6">
-    @if (imageUrl) {
-      <img [src]="imageUrl + '?scale=0.5'" class="img-fluid">
+    @if (imageUrl()) {
+      <img [src]="imageUrl() + '?scale=0.5'" class="img-fluid">
     }
   </div>
 </div>

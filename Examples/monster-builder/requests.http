@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "color": "red",
-  "body": "F",
+  "body": ""F,
   "leg": "C"
 }
 

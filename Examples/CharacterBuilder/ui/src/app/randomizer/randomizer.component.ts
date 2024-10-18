@@ -1,9 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  CharacterImageService,
-  ImageOptions,
-} from '../character-image.service';
-
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { CharacterImageService, ImageOptions } from '../character-image.service';
 
 @Component({
   selector: 'app-favorites',
@@ -13,44 +9,39 @@ import {
   styleUrls: ['./randomizer.component.css'],
 })
 export class RandomizerComponent implements OnInit {
-  public imageOptions?: ImageOptions;
-  public imageUrl?: string;
-  public scale = 0.5;
-  public imageWidth: number = 0;
-  public imageHeight: number = 0;
+  public imageOptions = signal<ImageOptions | undefined>(undefined);
+  public imageUrl = signal<string | undefined>(undefined);
+  public scale = signal(0.5);
+  public imageWidth = computed(() => 1024 * this.scale());
+  public imageHeight = computed(() => 1124 * this.scale());
+  public imageUrlWithScale = computed(() => `${this.imageUrl()}?scale=${this.scale()}`);
 
-  constructor(public characterImageService: CharacterImageService) {}
+  private readonly characterImageService = inject(CharacterImageService);
 
-  ngOnInit(): void {
-    this.characterImageService.getRandomImageOptions().subscribe((response) => {
-      this.imageOptions = response;
-      this.refreshImage();
-    });
+  async ngOnInit() {
+    const response = await this.characterImageService.getRandomImageOptions();
+    this.imageOptions.set(response);
+    await this.refreshImage();
   }
 
-  refreshImage(): void {
-    if (this.imageOptions) {
-      this.characterImageService
-        .buildImage(this.imageOptions)
-        .subscribe((response) => {
-          this.imageUrl = response.url;
-          this.imageWidth = 1024 * this.scale;
-          this.imageHeight = 1124 * this.scale;
-        });
+  async refreshImage() {
+    if (this.imageOptions()) {
+      const response = await this.characterImageService.buildImage(this.imageOptions()!);
+      this.imageUrl.set(response.url);
     }
   }
 
-  zoomIn(): void {
-    this.scale = Math.min(1, this.scale + 0.1);
-    this.refreshImage();
+  async zoomIn() {
+    this.scale.update(scale => Math.min(1, scale + 0.1));
+    await this.refreshImage();
   }
 
-  zoomOut(): void {
-    this.scale = Math.max(0.1, this.scale - 0.1);
-    this.refreshImage();
+  async zoomOut() {
+    this.scale.update(scale => Math.max(0.1, scale - 0.1));
+    await this.refreshImage();
   }
 
-  next(): void {
-    this.ngOnInit();
+  async next() {
+    await this.ngOnInit();
   }
 }

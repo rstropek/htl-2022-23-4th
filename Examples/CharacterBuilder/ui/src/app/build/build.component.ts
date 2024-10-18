@@ -1,10 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  CharacterImageService,
-  ImageOptions,
-} from '../character-image.service';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { CharacterImageService, Eye, Mouth, RightHand } from '../character-image.service';
 import { FormsModule } from '@angular/forms';
-
 
 @Component({
   selector: 'app-build',
@@ -14,31 +10,39 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./build.component.css'],
 })
 export class BuildComponent implements OnInit {
-  public imageUrl?: string;
-  public imageOptions: ImageOptions = {
-    eye: 'NoEye',
-    hasHammer: false,
-    mouth: 'NoMouth',
-    rightHand: 'NoHand',
-    hasTail: false,
-  };
+  public imageUrl = signal<string | undefined>(undefined);
+  public eye = signal<Eye>('NoEye');
+  public hasHammer = signal(false);
+  public mouth = signal<Mouth>('NoMouth');
+  public rightHand = signal<RightHand>('NoHand');
+  public hasTail = signal(false);
 
-  constructor(private characterImageService: CharacterImageService) {}
+  private readonly characterImageService = inject(CharacterImageService);
 
-  ngOnInit(): void {
-    this.characterImageService
-      .buildImage(this.imageOptions)
-      .subscribe((response) => {
-        this.imageUrl = response.url;
-      });
+  ngOnInit() {
+    this.reload();
   }
 
-  randomOptions(): void {
-    this.characterImageService.getRandomImageOptions().subscribe((response) => {
-      this.imageOptions = response;
-
-      // This is an advanced requirement
-      this.ngOnInit();
+  async reload() {
+    const imageUrl = await this.characterImageService.buildImage({
+      eye: this.eye(),
+      hasHammer: this.hasHammer(),
+      mouth: this.mouth(),
+      rightHand: this.rightHand(),
+      hasTail: this.hasTail(),
     });
+    this.imageUrl.set(imageUrl.url);
+  }
+
+  async randomOptions() {
+    const response = await this.characterImageService.getRandomImageOptions();
+
+    this.eye.set(response.eye);
+    this.hasHammer.set(response.hasHammer);
+    this.mouth.set(response.mouth);
+    this.rightHand.set(response.rightHand);
+    this.hasTail.set(response.hasTail);
+
+    await this.reload();
   }
 }
